@@ -79,7 +79,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "../../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
+              "$ref": "#/definitions/CloudError"
             }
           }
         },
@@ -125,7 +125,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "../../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
+              "$ref": "#/definitions/CloudError"
             }
           }
         }
@@ -208,7 +208,8 @@
       ],
       "properties": {
         "backupName": {
-          "$ref": "../../../common-types/v1/common-types.json#/definitions/BackupName"
+          "type": "string",
+          "description": "Backup Name for the current backup"
         },
         "backupFormat": {
           "description": "Backup Format for the current backup. (CollatedFormat is INTERNAL – DO NOT USE)",
@@ -344,6 +345,17 @@
         }
       },
       "description": "Represents ValidateBackup API Response"
+    },
+    "CloudError": {
+      "type": "object",
+      "x-ms-external": true,
+      "properties": {
+        "error": {
+          "$ref": "../../../../../../common-types/resource-management/v1/types.json#/definitions/ErrorResponse",
+          "description": "The resource management error response."
+        }
+      },
+      "description": "An error response from the Batch service."
     }
   },
   "produces": [
