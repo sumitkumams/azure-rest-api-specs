@@ -323,8 +323,21 @@
           "description": "The response properties of a backup and export operation."
         },
         "error": {
-          "$ref": "../../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse",
-          "description": "The BackupAndExport operation error response."
+          "title": "Backup Error Response",
+          "description": "The BackupAndExport operation error response.",
+          "type": "object",
+          "properties": {
+            "code": {
+              "readOnly": true,
+              "type": "string",
+              "description": "The error code."
+            },
+            "message": {
+              "readOnly": true,
+              "type": "string",
+              "description": "The error message."
+            }
+          }
         }
       },
       "allOf": [
