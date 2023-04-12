@@ -31,10 +31,6 @@
           "datasourceSizeInBytes": 1024,
           "dataTransferredInBytes": 1024,
           "backupMetadata": "{\"key1\":\"value1\",\"key2\":\"value2\"}"
-        },
-        "error": {
-          "code": "AggregateException",
-          "message": "System.AggregateException: One or more errors occurred. (Mismatch in count of number of Commited-Blocks from service.)"
         }
       }
     },
