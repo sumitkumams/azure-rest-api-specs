@@ -271,7 +271,7 @@
           ],
           "x-ms-enum": {
             "name": "OperationStatus",
-            "modelAsString": false,
+            "modelAsString": true,
             "values": [
               {
                 "value": "Pending",
